@@ -7,6 +7,7 @@
  */
 public class Person {
 
+    //attributes
     private String firstName;
     private String lastName;
     private char lastNameInitial;
@@ -15,6 +16,7 @@ public class Person {
     private int feet;
     private int inches;
     
+    //constructors
     Person(String firstName,String lastName,double weight,int feet,int inches){
         this.firstName=firstName;
         this.lastName=lastName;
@@ -42,6 +44,7 @@ public class Person {
         
     }
     
+    //setters and getters
     public String getFirstName() {
         return firstName;
     }
@@ -102,7 +105,10 @@ public class Person {
      * @param args the command line arguments
      */
    
-    
+    /**
+     * this method calculate the BMI of a person and return the value as a string 
+     * @return 
+     */
     String calculateBMI(){
   
       //calculating the person height in inches 1 foot is 12 inches  
@@ -111,6 +117,7 @@ public class Person {
      //calculating the BMI
      double BMI=(getWeight() * 703)/(heightInInches * heightInInches);
      
+     //our variable that will hold the BIM string to be returned
      String BMIlevel="";
      
      if(BMI<18.5){
@@ -126,6 +133,7 @@ public class Person {
      return (BMI+" "+BMIlevel);
     }
 
+    //overriding the toString() method
    public String toString(){
        
        return"First Name: "+getFirstName()+","+" Last Name: "+getLastName()+","+" Initial: "+getLastNameInitial()+","+ " Age: "+
